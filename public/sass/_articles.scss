@@ -1,0 +1,51 @@
+@import "./variables";
+
+.all-cards-container {
+  width: 90vw;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .card {
+    width: 300px;
+    background-color: $bg-color;
+    .card-link {
+      font-weight: 500;
+      color: $primary-color;
+      text-decoration: underline 2px dashed $primary-color;
+      &:hover {
+        color: $dark-color;
+        text-decoration: underline 2px dashed $primary-color;
+      }
+    }
+  }
+}
+
+.article {
+  &-wrapper {
+    @extend %shared-container;
+    width: 60vw;
+    margin: 40px auto;
+    background-color: $bg-color;
+    padding: 40px;
+  }
+  &-desc {
+    color: $primary-color;
+  }
+  &-body {
+    padding-top: 30px;
+    font-size: 20px;
+    line-height: 200%;
+    text-align: justify;
+  }
+}
+
+.icon-container {
+  text-align: right;
+  .article-icon {
+    cursor: pointer;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

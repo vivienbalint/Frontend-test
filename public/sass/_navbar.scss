@@ -1,0 +1,29 @@
+@import "./variables";
+
+#navbar {
+  background-color: $bg-color;
+  border-bottom: 1px solid $light-color;
+  #logo {
+    max-width: 50vw;
+  }
+  .btn-nav {
+    width: 115px;
+  }
+  .nav-link {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary-color;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    &:visited,
+    :active {
+      color: $primary-color;
+    }
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline 2px dashed $primary-color;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "./variables";
+
+.form {
+  &-container {
+    @extend %shared-container;
+    width: 450px;
+    &-article {
+      @extend %shared-container;
+      width: 600px;
+    }
+  }
+  &-title {
+    color: $dark-color;
+    text-align: center;
+    font-size: 38px;
+  }
+}
+
+.box {
+  margin: 50px 0;
+}

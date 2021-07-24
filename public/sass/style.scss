@@ -1,0 +1,18 @@
+@use "./custom.scss";
+@use "./navbar";
+@use "./forms";
+@use "./user-page";
+@use "./articles";
+@import "./variables";
+@import "./mediaquery";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Orbitron:wght@400;500;600&display=swap");
+
+body {
+  font-family: $font;
+  background-image: $bg-img-small;
+  @include respond-to("desktop-small") {
+    background-image: $bg-img-desktop;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

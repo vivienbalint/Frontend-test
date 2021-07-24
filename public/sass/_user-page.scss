@@ -1,0 +1,50 @@
+@import "./variables";
+
+.text-container {
+  width: 70vw;
+  margin: auto;
+  .title {
+    font-size: 38px;
+    text-align: center;
+  }
+  .list {
+    &-item {
+      font-size: 25px;
+      list-style: none;
+      text-decoration: none;
+    }
+    &-title {
+      text-decoration: underline wavy $primary-color;
+    }
+  }
+}
+
+.text-dark {
+  color: $dark-color;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+#people-img {
+  width: 90%;
+  margin: auto;
+}
+
+.sub-form-title {
+  font-size: 17px;
+  font-weight: 500;
+  text-align: right;
+  text-decoration: underline solid $dark-color;
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 11px;
+}
+
+.success-message {
+  color: $success-color;
+  font-size: 11px;
+}

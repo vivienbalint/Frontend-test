@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Card with isDisabled = true prop should match the snapshot 1`] = `"<div class=\\"card mb-4 card border-dark\\"><div class=\\"card-body\\"><div class=\\"card-title h5\\">An article</div><div class=\\"mb-2 text-muted card-subtitle h6\\">A description</div><p class=\\"card-text\\">A long text</p></div></div>"`;
