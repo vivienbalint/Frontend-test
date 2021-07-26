@@ -3,6 +3,7 @@ import api from "../api/api.user";
 import AuthContext from "../auth/auth.context";
 import { useHistory } from "react-router";
 import { Form, Button, Alert, FloatingLabel, Row, Col } from "react-bootstrap";
+import DeleteUser from "./DeleteUser";
 
 const UpdateUser = () => {
   let token = sessionStorage.getItem("token") ?? "";
@@ -103,7 +104,7 @@ const UpdateUser = () => {
             </Form.Group>
           </Col>
           <Col xs="auto">
-            <Button variant="primary" type="submit" className="mb-3">
+            <Button variant="primary" type="submit" className="mb-3 user-btn">
               Save
             </Button>
           </Col>
@@ -125,7 +126,7 @@ const UpdateUser = () => {
             </Form.Group>
           </Col>
           <Col xs="auto">
-            <Button variant="primary" type="submit" className="mb-3">
+            <Button variant="primary" type="submit" className="mb-3 user-btn">
               Save
             </Button>
           </Col>
@@ -147,12 +148,13 @@ const UpdateUser = () => {
             </Form.Group>
           </Col>
           <Col xs="auto">
-            <Button variant="primary" type="submit" className="mb-3">
+            <Button variant="primary" type="submit" className="mb-3 user-btn">
               Save
             </Button>
           </Col>
         </Row>
       </Form>
+      <DeleteUser />
     </div>
   );
 };

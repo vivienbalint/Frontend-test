@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../api/api.user";
-import { Container, Row, Col, Alert } from "react-bootstrap";
+import { Row, Col, Alert } from "react-bootstrap";
 import UpdateUser from "./UpdateUser";
-import DeleteUser from "./DeleteUser";
-import peopleImg from "../img/people.jpg";
-// Image created by pch.vector - www.freepik.com
 
 const UserPage = () => {
   const token = sessionStorage.getItem("token");
@@ -43,7 +40,7 @@ const UserPage = () => {
       )}
       <div className="text-container">
         <Row>
-          <h1 className="text-dark title my-4">
+          <h1 className="text-dark title my-5">
             Welcome <span className="text-primary">{user.username}</span>! :)
           </h1>
         </Row>
@@ -66,20 +63,6 @@ const UserPage = () => {
           <Col className="align-right">
             <UpdateUser />
           </Col>
-        </Row>
-      </div>
-      <Container>
-        <Row>
-          <img
-            src={peopleImg}
-            alt="People greeting each other"
-            id="people-img"
-          />
-        </Row>
-      </Container>
-      <div className="text-container">
-        <Row>
-          <DeleteUser />
         </Row>
       </div>
     </div>

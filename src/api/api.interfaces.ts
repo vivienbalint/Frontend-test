@@ -51,8 +51,8 @@ export interface ArticleApiResponse {
   description: string;
   slug: string;
   body: string;
-  taglist: [string];
-  comments: [string];
+  taglist: string[];
+  comments: string[];
   id: number;
   created: number;
   updated: number;

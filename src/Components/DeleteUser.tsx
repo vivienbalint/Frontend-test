@@ -37,15 +37,11 @@ const DeleteUser = () => {
 
   return (
     <div>
+      <h2 className="text-dark list-title my-3">Delete user by email:</h2>
       <Form onSubmit={handleDelete} className="m-auto">
         <Row className="align-items-center">
-          <Col xs={7}>
-            <p className="text-dark sub-form-title mb-5">
-              Delete user by email:
-            </p>
-          </Col>
           <Col>
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-3">
               <FloatingLabel label="Enter email">
                 <Form.Control
                   size="sm"
@@ -60,7 +56,7 @@ const DeleteUser = () => {
             </Form.Group>
           </Col>
           <Col xs="auto">
-            <Button variant="dark" type="submit" className="mb-5">
+            <Button variant="dark" type="submit" className="mb-3 user-btn">
               Delete
             </Button>
           </Col>
