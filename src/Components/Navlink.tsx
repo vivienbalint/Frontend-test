@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import AuthContext from "../auth/auth.context";
@@ -18,7 +18,7 @@ export default function Navlink(props: NavlinkProps) {
 
   if (!props.isLoggedIn) {
     return (
-      <div className="d-flex">
+      <div className="d-flex nav nav-mobile">
         <Link to="/login">
           <Button variant="primary" size="lg" className="btn-nav m-1">
             Login
@@ -33,7 +33,7 @@ export default function Navlink(props: NavlinkProps) {
     );
   } else {
     return (
-      <div className="d-flex">
+      <div className="d-flex nav nav-mobile">
         <Link to="/" className="nav-link">
           Articles
         </Link>

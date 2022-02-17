@@ -37,7 +37,7 @@ const DeleteUser = () => {
 
   return (
     <div>
-      <h2 className="text-dark list-title my-3">Delete user by email:</h2>
+      <h2 className="text-dark list-title my-3 pb-3">Delete User By Email:</h2>
       <Form onSubmit={handleDelete} className="m-auto">
         <Row className="align-items-center">
           <Col>

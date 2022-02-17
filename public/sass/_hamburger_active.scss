@@ -1,0 +1,21 @@
+.full-height {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  z-index: 2;
+
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+}

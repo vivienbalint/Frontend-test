@@ -21,7 +21,7 @@ const getUser = async (data: string) => {
     return {
       userData: response.user,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: err.response.data.errors };
   }
 };
@@ -41,7 +41,7 @@ const updateUser = async (data: UserUpdateRequest) => {
     return {
       userData: response,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: err.response.errors };
   }
 };
@@ -59,7 +59,7 @@ const loginUser = async (data: LoginCredentials) => {
     return {
       user: response.user,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: JSON.stringify(Object.values(err.response.data.errors)) };
   }
 };
@@ -77,7 +77,7 @@ const createUser = async (data: RegisterCredentials) => {
     return {
       user: response.user,
     };
-  } catch (err) {
+  } catch (err: any) {
     if (err.response.data.errors) {
       return { error: JSON.stringify(Object.values(err.response.data.errors)) };
     } else {
@@ -101,7 +101,7 @@ const deleteUser = async (data: string) => {
     return {
       res: response,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: JSON.stringify(err.response.data.message) };
   }
 };

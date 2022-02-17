@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import api from "../api/api.article";
 import ArticleCard from "./ArticleCard";
 import { Alert } from "react-bootstrap";

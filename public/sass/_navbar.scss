@@ -1,10 +1,14 @@
 @import "./variables";
+@import "./mediaquery";
 
 #navbar {
   background-color: $bg-color;
   border-bottom: 1px solid $light-color;
   #logo {
     max-width: 50vw;
+  }
+  #logo-mobile {
+    width: 70px;
   }
   .btn-nav {
     width: 115px;
@@ -26,4 +30,55 @@
       text-decoration: underline 2px dashed $primary-color;
     }
   }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.header-container {
+  padding: 15px;
+  background-color: $bg-color;
+  @include respond-to("tablet") {
+    padding: 20px;
+  }
+  @include respond-to("desktop") {
+    padding: 20px 30px;
+  }
+  @include respond-to("wide") {
+    max-width: 1700px;
+    margin: auto;
+  }
+}
+
+.header-container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger-menu {
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  width: 100%;
+  @include respond-to("desktop") {
+    width: auto;
+  }
+}
+
+.nav {
+  display: none;
+  @include respond-to("desktop") {
+    display: flex;
+  }
+}
+
+.hamburger-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

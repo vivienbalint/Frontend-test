@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import api from "../api/api.user";
-import { Row, Col, Alert } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 import UpdateUser from "./UpdateUser";
 
 const UserPage = () => {
@@ -39,15 +39,13 @@ const UserPage = () => {
         </Alert>
       )}
       <div className="text-container">
-        <Row>
-          <h1 className="text-dark title my-5">
-            Welcome <span className="text-primary">{user.username}</span>! :)
-          </h1>
-        </Row>
-        <Row>
-          <Col xs={7}>
+        <h1 className="text-dark title py-5">
+          Welcome <span className="text-primary">{user.username}</span>! :)
+        </h1>
+        <div className="user-data-container">
+          <div id="flex-item1">
             <ul>
-              <h2 className="text-dark list-title my-3">Your User Data:</h2>
+              <h2 className="text-dark list-title my-2">Your User Data:</h2>
               <li className="text-dark list-item pt-3">
                 Email: <span className="text-primary"> {user.email} </span>
               </li>
@@ -59,11 +57,11 @@ const UserPage = () => {
                 About you: <span className="text-primary"> {user.bio} </span>
               </li>
             </ul>
-          </Col>
-          <Col className="align-right">
+          </div>
+          <div id="flex-item2">
             <UpdateUser />
-          </Col>
-        </Row>
+          </div>
+        </div>
       </div>
     </div>
   );

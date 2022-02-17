@@ -11,7 +11,7 @@ const getArticles = async () => {
     return {
       articles: response.articles,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: err.response };
   }
 };
@@ -27,7 +27,7 @@ const getArticleBySlug = async (data: string) => {
     return {
       article: response.article,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: JSON.stringify(err.response.data.message) };
   }
 };
@@ -47,7 +47,7 @@ const createArticle = async (data: ArticleCredentials) => {
     return {
       article: response,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: JSON.stringify(err.response.data.message) };
   }
 };
@@ -65,7 +65,7 @@ const updateArticleBySlug = async (data: ArticleCredentials) => {
     return {
       article: response.article,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: JSON.stringify(err.response.data.message) };
   }
 };
@@ -83,7 +83,7 @@ const deleteArticle = async (data: string) => {
     return {
       res: response,
     };
-  } catch (err) {
+  } catch (err: any) {
     return { error: JSON.stringify(err.response.data.message) };
   }
 };

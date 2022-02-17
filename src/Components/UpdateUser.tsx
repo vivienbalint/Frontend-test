@@ -86,75 +86,80 @@ const UpdateUser = () => {
           <p>{error.replace(regex, "")}</p>
         </Alert>
       )}
-      <h2 className="text-dark list-title my-3">Update Your User Data:</h2>
-      <Form onSubmit={handleEmailUpdate} className="m-auto">
-        <Row className="align-items-center">
-          <Col>
-            <Form.Group className="mb-3">
-              <FloatingLabel label="Enter new email address">
-                <Form.Control
-                  size="sm"
-                  type="email"
-                  aria-describedby="addon-btn1"
-                  placeholder="Enter new email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </FloatingLabel>
-            </Form.Group>
-          </Col>
-          <Col xs="auto">
-            <Button variant="primary" type="submit" className="mb-3 user-btn">
-              Save
-            </Button>
-          </Col>
-        </Row>
-      </Form>
-      <Form onSubmit={handleUsernameUpdate} className="m-auto">
-        <Row className="align-items-center">
-          <Col>
-            <Form.Group className="mb-3">
-              <FloatingLabel label="Enter new username">
-                <Form.Control
-                  size="sm"
-                  type="text"
-                  placeholder="Enter new username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-              </FloatingLabel>
-            </Form.Group>
-          </Col>
-          <Col xs="auto">
-            <Button variant="primary" type="submit" className="mb-3 user-btn">
-              Save
-            </Button>
-          </Col>
-        </Row>
-      </Form>
-      <Form onSubmit={handleBioUpdate} className="m-auto">
-        <Row className="align-items-center">
-          <Col>
-            <Form.Group className="mb-3">
-              <FloatingLabel label="Tell us something about yourself...">
-                <Form.Control
-                  as="textarea"
-                  size="sm"
-                  placeholder="Tell us something about yourself..."
-                  value={bio}
-                  onChange={(e) => setBio(e.target.value)}
-                />
-              </FloatingLabel>
-            </Form.Group>
-          </Col>
-          <Col xs="auto">
-            <Button variant="primary" type="submit" className="mb-3 user-btn">
-              Save
-            </Button>
-          </Col>
-        </Row>
-      </Form>
-      <DeleteUser />
+      <div className="px-3">
+        <h2 className="text-dark list-title my-2 pb-3 ">
+          Update Your User Data:
+        </h2>
+        <Form onSubmit={handleEmailUpdate} className="m-auto">
+          <Row className="align-items-center">
+            <Col>
+              <Form.Group className="mb-3">
+                <FloatingLabel label="Enter new email address">
+                  <Form.Control
+                    size="sm"
+                    type="email"
+                    aria-describedby="addon-btn1"
+                    placeholder="Enter new email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </FloatingLabel>
+              </Form.Group>
+            </Col>
+            <Col xs="auto">
+              <Button variant="primary" type="submit" className="mb-3 user-btn">
+                Save
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+        <Form onSubmit={handleUsernameUpdate} className="m-auto">
+          <Row className="align-items-center">
+            <Col>
+              <Form.Group className="mb-3">
+                <FloatingLabel label="Enter new username">
+                  <Form.Control
+                    size="sm"
+                    type="text"
+                    placeholder="Enter new username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                </FloatingLabel>
+              </Form.Group>
+            </Col>
+            <Col xs="auto">
+              <Button variant="primary" type="submit" className="mb-3 user-btn">
+                Save
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+        <Form onSubmit={handleBioUpdate} className="m-auto">
+          <Row className="align-items-center">
+            <Col>
+              <Form.Group className="mb-3">
+                <FloatingLabel label="Tell us something about yourself...">
+                  <Form.Control
+                    as="textarea"
+                    maxLength={300}
+                    size="sm"
+                    placeholder="Tell us something about yourself..."
+                    value={bio}
+                    onChange={(e) => setBio(e.target.value)}
+                  />
+                </FloatingLabel>
+              </Form.Group>
+            </Col>
+            <Col xs="auto">
+              <Button variant="primary" type="submit" className="mb-3 user-btn">
+                Save
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+        <DeleteUser />
+      </div>
     </div>
   );
 };

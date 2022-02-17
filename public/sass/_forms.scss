@@ -1,9 +1,13 @@
 @import "./variables";
+@import "./mediaquery";
 
 .form {
   &-container {
     @extend %shared-container;
-    width: 450px;
+    width: 90vw;
+    @include respond-to("tablet") {
+      width: 450px;
+    }
     &-article {
       @extend %shared-container;
       width: 600px;
@@ -17,5 +21,7 @@
 }
 
 .box {
+  // display: flex;
+  // justify-content: center;
   margin: 50px 0;
 }
